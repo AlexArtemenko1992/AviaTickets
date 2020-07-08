@@ -51,7 +51,7 @@ class TicketsUI {
   showEmptyMsg() {
     const template = TicketsUI.emptyMsgTemplate();
     this.container.insertAdjacentHTML("afterbegin", template);
-    const msg = document.querySelector("tickets-empty-res-msg");
+    const msg = document.querySelector(".msg");
     console.log(msg);
 
     setTimeout(() => {
@@ -61,7 +61,7 @@ class TicketsUI {
 
   static emptyMsgTemplate() {
     return `
-      <div class="tickets-empty-res-msg">По вашему запросу билетов не найдено.</div>
+      <div class="tickets-empty-res-msg msg">По вашему запросу билетов не найдено.</div>
     `;
   }
 
