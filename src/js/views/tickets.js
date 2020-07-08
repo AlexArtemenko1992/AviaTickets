@@ -51,11 +51,11 @@ class TicketsUI {
   showEmptyMsg() {
     const template = TicketsUI.emptyMsgTemplate();
     this.container.insertAdjacentHTML("afterbegin", template);
-    // const msg = document.querySelector('.tickets-empty-res-msg"');
+    const msg = document.querySelector('.tickets-empty-res-msg"');
 
-    // setTimeout(() => {
-    //   msg.remove();
-    // }, 1000);
+    setTimeout(() => {
+      msg.remove();
+    }, 1000);
   }
 
   static emptyMsgTemplate() {
