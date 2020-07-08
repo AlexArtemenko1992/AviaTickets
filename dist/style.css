@@ -331,7 +331,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 120%;
+    top: 100%;
   }
 
   .test {
