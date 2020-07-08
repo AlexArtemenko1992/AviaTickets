@@ -51,7 +51,8 @@ class TicketsUI {
   showEmptyMsg() {
     const template = TicketsUI.emptyMsgTemplate();
     this.container.insertAdjacentHTML("afterbegin", template);
-    const msg = document.querySelector('.tickets-empty-res-msg"');
+    const msg = document.querySelector("tickets-empty-res-msg");
+    console.log(msg);
 
     setTimeout(() => {
       msg.remove();
