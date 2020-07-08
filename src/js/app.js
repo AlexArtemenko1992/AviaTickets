@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   initApp();
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    if (!formUI.originValue && !formUI.destinationValue) {
+    if (!formUI.originValue || !formUI.destinationValue) {
       ticketsUI.emptyField();
       return;
     }

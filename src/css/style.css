@@ -325,6 +325,7 @@
   .tickets-empty-res-msg {
     width: 300px !important;
     height: 130px;
+    vertical-align: 130px;
   }
 
   .test {
