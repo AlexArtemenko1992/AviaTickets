@@ -40,6 +40,11 @@ class TicketsUI {
       e.preventDefault();
       modalError.remove();
     });
+
+    setTimeout(() => {
+      modalError.remove();
+    }, 1500);
+
     return;
   }
 
