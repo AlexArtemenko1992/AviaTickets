@@ -302,7 +302,7 @@
   }
 
   .mt-big {
-    margin-top: 100px;
+    margin-top: 70px;
   }
 
   .container {
@@ -323,6 +323,11 @@
 
   .empty-field,
   .tickets-empty-res-msg {
-    width: 300px;
+    width: 300px !important;
+    height: 80px;
+  }
+
+  .test {
+    height: 100%;
   }
 }
