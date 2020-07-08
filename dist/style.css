@@ -328,6 +328,9 @@
 
   .tickets-empty-res-msg {
     width: 300px !important;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 10%;
   }
 
