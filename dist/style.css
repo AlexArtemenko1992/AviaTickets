@@ -330,7 +330,7 @@
     width: 300px !important;
     position: absolute;
     left: 50%;
-    top: 0;
+    top: 20%;
     transform: translateX(-50%);
   }
 
