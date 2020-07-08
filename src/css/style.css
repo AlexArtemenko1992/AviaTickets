@@ -321,7 +321,8 @@
     display: block !important;
   }
 
-  .empty-field {
+  .empty-field,
+  .tickets-empty-res-msg {
     width: 85%;
   }
 }
