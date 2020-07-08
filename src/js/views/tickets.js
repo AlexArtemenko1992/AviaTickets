@@ -40,6 +40,7 @@ class TicketsUI {
       e.preventDefault();
       modalError.remove();
     });
+    return;
   }
 
   showEmptyMsg() {
