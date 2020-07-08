@@ -302,7 +302,7 @@
   }
 
   .mt-big {
-    margin-top: 50px;
+    margin-top: 120px;
   }
 
   .container {
@@ -321,11 +321,14 @@
     display: block !important;
   }
 
-  .empty-field,
-  .tickets-empty-res-msg {
+  .empty-field {
     width: 300px !important;
     height: 130px;
-    vertical-align: 130px;
+  }
+
+  .tickets-empty-res-msg {
+    width: 300px !important;
+    top: 68%;
   }
 
   .test {
