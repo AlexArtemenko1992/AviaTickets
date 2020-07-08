@@ -12,6 +12,10 @@ document.addEventListener("DOMContentLoaded", (e) => {
   initApp();
   form.addEventListener("submit", (e) => {
     e.preventDefault();
+    if (!formUI.originValue && !formUI.destinationValue) {
+      ticketsUI.emptyField();
+      return;
+    }
     onFormSubmit();
   });
 
@@ -28,11 +32,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
     const return_date = formUI.returnDateValue;
     const currency = currencyUI.currecyValue;
 
-    if (!origin && !destination && !depart_date && !return_date) {
-      console.log("errror");
-      return;
-    }
-
     await locations.fetchTickets({
       origin,
       destination,
@@ -41,7 +40,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
       currency,
     });
 
-    console.log(locations.lastSearch);
     ticketsUI.renderTickets(locations.lastSearch);
   }
 });

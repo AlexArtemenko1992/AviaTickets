@@ -6,6 +6,7 @@ class TicketsUI {
     this.getCurrencySymbol = currency.getCurrencySymbol.bind(currency);
   }
   renderTickets(tickets) {
+    console.log(tickets);
     this.clearContainer();
 
     if (!tickets.length) {
@@ -27,17 +28,40 @@ class TicketsUI {
   clearContainer() {
     this.container.innerHTML = "";
   }
+
+  emptyField() {
+    const template = TicketsUI.emptyField();
+
+    this.container.insertAdjacentHTML("afterbegin", template);
+
+    const closeBtn = document.querySelector(".close-modal");
+    const modalError = document.querySelector(".empty-field");
+    closeBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      modalError.remove();
+    });
+  }
+
   showEmptyMsg() {
     const template = TicketsUI.emptyMsgTemplate();
     this.container.insertAdjacentHTML("afterbegin", template);
   }
+
   static emptyMsgTemplate() {
     return `
-		   <div class="tickets-empty-res-msg">
-          По вашему запросу билетов не найдено.
-        </div>
-		`;
+      <div class="tickets-empty-res-msg">По вашему запросу билетов не найдено.</div>
+    `;
   }
+
+  static emptyField() {
+    return `
+      <div class='empty-field'>
+        <a href='#' class='close-modal'>Close</a>
+        <p>All fields must be filled!</p>
+      </div>
+    `;
+  }
+
   static ticketTemplate(ticket, currency) {
     return `
 			  <div class="col s12 m6 ">
